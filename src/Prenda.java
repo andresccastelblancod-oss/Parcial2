@@ -1,24 +1,24 @@
 public class Prenda {
-    private int codigo;
+    private int codigoPrenda;
     private String nombre;
     private String marca;
     private double precioBase;
     private CategoriaPrenda categoria;
 
-    public Prenda(int codigo, String nombre, String marca, double precioBase, CategoriaPrenda categoria) {
-        this.codigo = codigo;
+    public Prenda(int codigoPrenda, String nombre, String marca, double precioBase, CategoriaPrenda categoria) {
+        this.codigoPrenda = codigoPrenda;
         this.nombre = nombre;
         this.marca = marca;
         this.precioBase = precioBase;
         this.categoria = categoria;
     }
 
-    public int getCodigo() {
-        return codigo;
+    public int getCodigoPrenda() {
+        return codigoPrenda;
     }
 
-    public void setCodigo(int codigo) {
-        this.codigo = codigo;
+    public void setCodigoPrenda(int codigoPrenda) {
+        this.codigoPrenda = codigoPrenda;
     }
 
     public String getNombre() {
@@ -56,11 +56,14 @@ public class Prenda {
     @Override
     public String toString() {
         return "Prenda{" +
-                "codigo=" + codigo +
+                "codigo=" + codigoPrenda +
                 ", nombre='" + nombre + '\'' +
                 ", marca='" + marca + '\'' +
                 ", precioBase=" + precioBase +
                 ", categoria=" + categoria +
                 '}';
+    }
+    public void obtenerCodigoPrenda(){
+
     }
 }

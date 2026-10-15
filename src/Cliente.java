@@ -24,8 +24,16 @@ public class Cliente extends Persona {
     public void setCategoria(CategoriaCliente categoria) { this.categoria = categoria; }
     public void setComprasRealizadas(List<Venta> comprasRealizadas) { this.comprasRealizadas = comprasRealizadas; }
 
+    @Override
+    public String toString() {
 
-    public void agregarCompra(Venta venta) {
-        this.comprasRealizadas.add(venta);
+        return "Cliente{" +
+                "codigoAfiliacion='" + codigoAfiliacion + '\'' +
+                ", categoria=" + categoria +
+                ", comprasRealizadas=" + comprasRealizadas +
+                '}';
     }
 }
+
+
+
