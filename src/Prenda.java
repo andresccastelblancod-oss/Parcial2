@@ -1,4 +1,4 @@
-public class Prenda {
+class Prenda {
     private int codigoPrenda;
     private String nombre;
     private String marca;
@@ -13,45 +13,20 @@ public class Prenda {
         this.categoria = categoria;
     }
 
-    public int getCodigoPrenda() {
-        return codigoPrenda;
-    }
+    public int getCodigoPrenda() { return codigoPrenda; }
+    public void setCodigoPrenda(int codigoPrenda) { this.codigoPrenda = codigoPrenda; }
 
-    public void setCodigoPrenda(int codigoPrenda) {
-        this.codigoPrenda = codigoPrenda;
-    }
+    public String getNombre() { return nombre; }
+    public void setNombre(String nombre) { this.nombre = nombre; }
 
-    public String getNombre() {
-        return nombre;
-    }
+    public String getMarca() { return marca; }
+    public void setMarca(String marca) { this.marca = marca; }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
+    public double getPrecioBase() { return precioBase; }
+    public void setPrecioBase(double precioBase) { this.precioBase = precioBase; }
 
-    public String getMarca() {
-        return marca;
-    }
-
-    public void setMarca(String marca) {
-        this.marca = marca;
-    }
-
-    public double getPrecioBase() {
-        return precioBase;
-    }
-
-    public void setPrecioBase(double precioBase) {
-        this.precioBase = precioBase;
-    }
-
-    public CategoriaPrenda getCategoria() {
-        return categoria;
-    }
-
-    public void setCategoria(CategoriaPrenda categoria) {
-        this.categoria = categoria;
-    }
+    public CategoriaPrenda getCategoria() { return categoria; }
+    public void setCategoria(CategoriaPrenda categoria) { this.categoria = categoria; }
 
     @Override
     public String toString() {
@@ -63,7 +38,17 @@ public class Prenda {
                 ", categoria=" + categoria +
                 '}';
     }
-    public void obtenerCodigoPrenda(){
 
+    public int obtenerCodigoPrenda() {
+        return this.codigoPrenda;
+    }
+
+    public double calcularPrecioRecargo() {
+        switch (this.categoria) {
+            case VESTIDO:  return this.precioBase * 1.10; // 10% recargo
+            case CHAQUETA: return this.precioBase * 1.15; // 15% recargo
+            case CALZADO:  return this.precioBase * 1.05; // 5% recargo
+            default:       return this.precioBase;        // CAMISETA / PANTALON
+        }
     }
 }
