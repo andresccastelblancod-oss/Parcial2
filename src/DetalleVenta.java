@@ -41,4 +41,3 @@ public void calcularSubtotal(Cliente cliente) {
     this.subtotal = this.precioUnitarioFinal * this.cantidad;
 }
 }
-
