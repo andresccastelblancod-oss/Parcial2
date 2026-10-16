@@ -55,11 +55,11 @@ public class Inventario {
         this.prenda = prenda;
     }
 
-    @Override
+  @Override
     public String toString() {
         return "Inventario{" +
                 "talla=" + talla +
-                ", color='" + color + '\'' +
+                ", color='" + color + ''' +
                 ", cantidadDisponible=" + cantidadDisponible +
                 '}';
     }
