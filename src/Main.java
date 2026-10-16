@@ -678,7 +678,7 @@ public class Main {
         }
     }
 
-    // case 12
+    // metodo auxiliar
     public static int seleccionarSucursal() {
 
         System.out.println("\nSucursales:");
